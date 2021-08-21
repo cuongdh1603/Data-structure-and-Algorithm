@@ -4,7 +4,6 @@ using namespace std;
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);                    \
     cout.tie(NULL);
-#define INP freopen("S.INP", "r", stdin);
 #define ll long long
 #define MOD 1000000007
 #define CI \
