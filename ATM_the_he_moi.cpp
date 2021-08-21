@@ -1,4 +1,4 @@
-#include "bits/stdc++.h"
+#include<bits/stdc++.h>
 using namespace std;
 #define FAST                          \
     ios_base::sync_with_stdio(false); \
@@ -21,8 +21,7 @@ ll get_mx(ll upper) {
     return 1;
 }
 vector<vector<ll>> subsets;
-void comb_util(int chosen[], vector<ll> &arr,
-					int index, int r, int start, int end)
+void comb_util(int chosen[], vector<ll> &arr,int index, int r, int start, int end)
 {
 	if (index == r)
 	{
@@ -37,8 +36,8 @@ void comb_util(int chosen[], vector<ll> &arr,
 	for (int i = start; i <= end; i++)
 	{
 		chosen[index] = i;
-		comb_util(chosen, arr, index + 1,
-											r, i, end);
+		comb_util(chosen, arr, index + 1,r, i, end);
+											
 	}
 	return;
 }
@@ -134,7 +133,6 @@ void solve()
     ll ways=1;
     for (int i=0; i<seg_size.size(); i++)
         ways *= calc(seg_size[i], seg_sum[i]);
-
     cout << size << ' ' << ways << endl;
 }
 int main()
